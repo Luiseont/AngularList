@@ -9,11 +9,15 @@ import { Directory } from 'src/app/directory';
 })
 export class AppComponent implements OnInit {
   
-  List: Directory[];
+  List: Directory;
   constructor(private Directory: DirectoryService) {}
 
   ngOnInit() {
-    this.List = this.Directory.fetchDirectory();
+    this.Directory.fetchDirectory().subscribe(result => { 
+        this.List = result;
+    }, error => {
+       console.log(<any>error);
+      });
   }
 
 }
