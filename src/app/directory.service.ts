@@ -7,7 +7,8 @@ import { Directory } from 'src/app/directory';
 export class DirectoryService {
 
   constructor() { }
- 
+  
+  Api: string = "http://app-directory.herokuapp.com/";
   data: Directory[];
 
   fetchDirectory(){
@@ -17,6 +18,13 @@ export class DirectoryService {
         'name':"Luis",
         'lastname':"Ontivero",
         'phone':4143448714,
+        'direction':"Colonia Tovar"
+      },
+      {
+        'rowid':2,
+        'name':"Dollysabel ",
+        'lastname':"Urbina",
+        'phone':4120375387,
         'direction':"Colonia Tovar"
       }
     ]
