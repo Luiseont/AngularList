@@ -20,4 +20,8 @@ export class AppComponent implements OnInit {
       });
   }
 
+  ShowModal(){
+    alert('muestra modal!!');
+  }
+
 }
