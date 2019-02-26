@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th># telefonico</th>
+        <th>Direccion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of List">
+        <td>{{ person.name }}</td>
+        <td>{{ person.lastname }}</td>
+        <td>{{ person.phone }}</td>
+        <td>{{ person.direction }}</td>
+        <td> {{ person.rowid }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

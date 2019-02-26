@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DirectoryService } from 'src/app/directory.service';
 import { Directory } from 'src/app/directory';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +21,18 @@ export class AppComponent implements OnInit {
       });
   }
 
-  ShowModal(){
-    alert('muestra modal!!');
+  reload(){
+
+  }
+
+  submit(form){
+     //console.log(form.value);
+     this.Directory.AddEntry(form.value).subscribe(result => { 
+       $('#modal').modal('hide');
+  }, error => {
+      console.log(<any>error);
+    });
+     form.resetForm();
   }
 
 }
